@@ -9,6 +9,10 @@
   },
   "license": "MIT",
   "scripts": {
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test --test-concurrency=1 tests/browser.test.mjs",
+    "setup:tools": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Setup-Tools.ps1",
     "changeset": "changeset",
     "version": "changeset version && node scripts/sync-plugin-version.mjs",
     "check-plugin-version": "node scripts/sync-plugin-version.mjs --check"

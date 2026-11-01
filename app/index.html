@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#244f43">
+  <title>tcgcardgame · 卡片圖書館</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23244f43'/%3E%3Cpath d='M10 7h12v18H10z' fill='none' stroke='%23f3e8cf' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="tcgcardgame 首頁"><span class="brand-icon">▱</span><span>tcgcardgame<span class="brand-sub">YOUR CARD LIBRARY</span></span></a>
+    <p class="nav-label">我的空間</p>
+    <a class="nav-item active" href="/" aria-current="page"><span aria-hidden="true">▦</span> 卡片圖書館 <span class="nav-dot"></span></a>
+    <div class="sidebar-note"><span class="tiny-star">✧</span><p>每款遊戲，<br>都有自己的世界。</p><small>從一個遊戲套件開始，<br>慢慢建立你的卡片圖書館。</small></div>
+    <footer class="sidebar-footer"><span class="local-dot"></span> 資料保存在此瀏覽器<br><small>初始版本 · 卡表瀏覽</small></footer>
+  </aside>
+
+  <main>
+    <header class="topbar"><span>我的空間 <span class="breadcrumb">/</span> 卡片圖書館</span><span class="version">工作室預覽 <span>01</span></span></header>
+    <section class="page-intro">
+      <div><p class="eyebrow">COLLECT WORLDS, ONE CARD AT A TIME</p><h1>卡片圖書館<span>。</span></h1><p class="intro-copy">收藏不同遊戲的世界，從認識每一張卡開始。</p></div>
+      <label class="import-button" for="package-file"><span aria-hidden="true">＋</span> 匯入遊戲套件</label>
+      <input id="package-file" class="file-input" type="file" accept=".json,application/json" aria-label="匯入遊戲套件">
+    </section>
+
+    <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+
+    <section class="library-toolbar" aria-label="遊戲選擇">
+      <div class="game-field"><label for="game-select">目前遊戲</label><select id="game-select" aria-label="目前遊戲"><option value="">尚未匯入套件</option></select></div>
+      <div class="library-count"><strong id="package-count">00</strong><span>個遊戲套件</span><span class="count-divider"></span><strong id="card-count">00</strong><span>張卡片</span></div>
+    </section>
+
+    <section id="onboarding" class="onboarding">
+      <div class="empty-visual" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="demo-card card-back"></div><div class="demo-card card-front"><span>✧</span><i></i><small>A NEW WORLD</small></div><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span></div>
+      <p class="eyebrow">YOUR FIRST CHAPTER</p><h2>你的第一個卡片世界</h2><p>匯入遊戲套件，就能在這裡翻閱卡片、欣賞卡圖。<br>還沒有套件？先用下面兩個原創範例試試看。</p>
+      <div class="sample-downloads"><a href="/examples/astral-garden.json" download><span>01</span><div><strong>星庭紀行</strong><small>星光與花園的旅程 · 3 張範例卡</small></div><span aria-hidden="true">↓</span></a><a href="/examples/clockwork-harbor.json" download><span>02</span><div><strong>發條港灣</strong><small>來自海風的信件 · 3 張範例卡</small></div><span aria-hidden="true">↓</span></a></div>
+      <p class="sample-hint">下載範例 JSON → 點選「匯入遊戲套件」→ 選擇剛下載的檔案</p>
+    </section>
+
+    <section id="collection" class="collection" hidden>
+      <div class="collection-header"><div><p class="eyebrow">THE COLLECTION</p><h2 id="collection-title"></h2></div><p id="package-description"></p></div>
+      <div class="collection-layout">
+        <div><div class="grid-caption"><span>全部卡片</span><small>點選卡片查看詳情 ↗</small></div><div id="card-grid" class="card-grid"></div></div>
+        <aside id="card-detail" class="card-detail" aria-label="卡片詳情"><p>選一張卡片，開始探索。</p></aside>
+      </div>
+      <p class="sample-hint">繼續探索原創範例：<a href="/examples/astral-garden.json" download>星庭紀行 ↓</a> · <a href="/examples/clockwork-harbor.json" download>發條港灣 ↓</a></p>
+    </section>
+    <footer class="page-footer"><span>TCGCARDGAME <i>✧</i> 一張卡，一個故事。</span><span>原創測試範例，非正式 hololive 卡表。資料僅保存在目前瀏覽器。</span></footer>
+  </main>
+</body>
+</html>
