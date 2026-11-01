@@ -141,7 +141,7 @@ git branch --show-current
 
 **完成標準：** Git 正常顯示倉庫狀態，目前目錄內有 `package.json`、`app` 及 `scripts`。
 
-- 開發環境的倉庫網址是 `http://localhost:3000/willson5127/tcgcardgame.git`。
+- 開發環境的倉庫網址是 `http://localhost:3000/(username)/tcgcardgame.git`。
 - **另一台電腦的 localhost 指的是那台電腦自己。** 如果 Gitea 位於維護者電腦，請取得你能連線的實際網址；複製 localhost 網址不會自動連上維護者的服務。
 - 私有倉庫需要存取權，請使用 Git 的登入提示，不把密碼或 Token 寫進 Clone 網址、指令或文件。
 - 一般使用者使用 `main`；尚未合併的功能請依維護者指定分支測試，不必永久追蹤某個開發分支。
