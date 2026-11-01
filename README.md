@@ -1,3 +1,13 @@
+# tcgcardgame
+
+第一版卡表瀏覽：匯入原創範例套件、切換遊戲、查看卡圖與詳情，並保存在目前瀏覽器。
+
+使用 Node.js 22 或以上版本，在專案目錄執行 `npm start`，以 Chrome 或 Edge 開啟 <http://127.0.0.1:5173>。首頁可下載兩份測試套件，非正式 hololive 卡表。
+
+開發檢查：先執行 `npm run setup:tools`，再執行 `npm run check` 與 `npm test`。工具放在工作區的 `Tools/tcgcardgame`，測試使用已安裝的 Chrome 與 Edge。此初始版本尚未提供組牌、正式卡表或離線重新啟動。
+
+以下保留隨專案提供的 Matt Pocock 技能包說明與原始出處。
+
 <p>
   <a href="https://www.aihero.dev/s/skills-newsletter">
     <picture>
